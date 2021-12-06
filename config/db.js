@@ -8,7 +8,8 @@ const connectDB = async() =>
     try
     {
           await mongoose.connect(db,{
-              useNewUrlParser:true
+              useNewUrlParser:true,
+              //useCreateIndex:true ->//avoid warning collection.ensureIndex is deprecated
           });
           console.log('MongoDB Connected');
     }
